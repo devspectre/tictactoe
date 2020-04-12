@@ -1,0 +1,188 @@
+.game-container {
+  align-items: center;
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+
+    .users-info {
+      width: 370px;
+      margin-left: 20px;
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin: 14px;
+        padding: 2px;
+        border: solid 1px transparent;
+        padding-left: 10px;
+        .label {
+          flex-grow: 1;
+          flex-basis: 0;
+          color: #ffffff;
+          font-size: 19px;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+
+        .player-name {
+          flex-grow: 2;
+          flex-basis: 0;
+          width: 230px;
+          height: 36px;
+          border-radius: 3px;
+          background-color: #3e3e3e;
+          font-size: 18px;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+        }
+
+        &.select {
+          border: solid 1px aquamarine;
+        }
+      }
+    }
+  }
+
+  .body {
+    .info {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      height: 50px;
+    }
+    .board {
+      position: relative;
+      width: 556px;
+      height: 556px;
+      box-shadow: 0 3px 21px rgba(1, 1, 1, 0.43);
+      background-color: #000000;
+      margin-bottom: 50px;
+      .board_row {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .row {
+          width: 556px;
+          height: 172px;
+          background-color: #383838;
+          opacity: 0.54;
+        }
+        .row_win.select {
+          width: 556px;
+          height: 172px;
+          background-color: #47d6b666;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .win_bar {
+            width: 515px;
+            height: 14px;
+            background-color: #47d6b6;
+          }
+        }
+      }
+      .board_column {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .column {
+          display: inline-block;
+          height: 556px;
+          width: 172px;
+          background-color: #383838;
+          opacity: 0.54;
+        }
+        .column_win.select {
+          height: 556px;
+          width: 172px;
+          background-color: #47d6b666;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .win_bar {
+            height: 515px;
+            width: 14px;
+            background-color: #47d6b6;
+          }
+        }
+      }
+      .play_ground {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        .sqaure {
+          width: 172px;
+          height: 172px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .success-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        &.select {
+          display: block;
+        }
+      }
+
+      .board_diagonal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        
+        .win_rect {
+          height: 900px;
+          width: 172px;
+          background-color: #47d6b666;
+          display: none;
+          justify-content: center;
+          align-items: center;
+
+          .win_bar {
+            height: 700px;
+            width: 14px;
+            background-color: #47d6b6;
+          }
+        }
+
+        &.slash .win_rect {
+          display: flex;
+          transform: rotate(45deg);
+        }
+        &.dash .win_rect {
+          display: flex;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

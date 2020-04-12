@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  position: relative;
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto Black", arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(to top, #000000 0%, #373737 100%);
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: stretch;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,41 @@
+.new-game-dlg-container {
+
+  .dialog-title {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .content-group {
+    display: flex;
+    align-items: center;
+    margin: 14px;
+    flex-grow: 1;
+    flex-basis: 0;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    
+    button {
+      width: 158px;
+      height: 52px;
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+      box-shadow: 0 4px 0 #5f9c8d;
+      border-radius: 8px;
+      background-color: #b5e1d7;
+      background-image: linear-gradient(to top, #b5e1d7 0%, #d7eee9 100%);
+    }
+  }
+}

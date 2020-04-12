@@ -1,0 +1,29 @@
+.home-container {
+  .logo {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-grow: 2;
+    flex-basis: 0;
+    button {
+      color: #010102;
+      font-size: 27px;
+      font-weight: bold;
+      width: 200px;
+      height: 94px;
+      border-radius: 30px;
+      box-shadow: 0 4px 0 #5f9c8d;
+      background-color: #b5e1d7;
+      background-image: linear-gradient(to top, #b5e1d7 0%, #d7eee9 100%);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
