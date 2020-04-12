@@ -9,7 +9,7 @@ export const EndGameDlg = props => {
     const { open, onStart, onQuit } = props;
     let content = "";
 
-    content = "Board is Full, Please Restart Game!";
+    content = "Draw!";
 
     if (!open) {
         return (<div></div>);

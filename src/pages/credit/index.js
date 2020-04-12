@@ -57,7 +57,7 @@ class Credit extends Component {
 
         return (
             <div className="container credit-container">
-                <img className="logo" src={img_logo}></img>
+                <img className="logo" src={img_logo} alt="logo"></img>
                 <div className="title">Credit</div>
                 <div className="credit-list">
                     <div className="credit-list-container">

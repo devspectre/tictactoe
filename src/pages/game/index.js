@@ -20,7 +20,7 @@ import x_mark from 'assets/images/x-mark.png';
 function Square(props) {
     return (
         <div className="sqaure" onClick={props.onClick}>
-            {props.value && <img className="" src={(props.value === "X") ? x_mark : o_mark}></img>}
+            {props.value && <img className="" src={(props.value === "X") ? x_mark : o_mark} alt="stone"></img>}
         </div>
     );
 }
@@ -263,20 +263,20 @@ class Game extends Component {
                     onQuit={this.goHomePage}
                 />
                 <div className="header">
-                    <img src={img_logo}></img>
+                    <img src={img_logo} alt="logo"></img>
                     <div className="users-info">
                         <div className={"input-group " + player1_sel} onClick={this.setPlayer1First}>
-                            <div className="label"><img className="" src={x_icon}></img> Player 1</div>
+                            <div className="label"><img className="" src={x_icon} alt="x_icon"></img> Player 1</div>
                             <div className="player-name">{this.props.player1name}</div>
                         </div>
                         <div className={"input-group " + player2_sel} onClick={this.setPlayer2First}>
-                            <div className="label"><img className="" src={o_icon}></img> Player 2</div>
+                            <div className="label"><img className="" src={o_icon} alt="o_icon"></img> Player 2</div>
                             <div className="player-name">{this.props.player2name}</div>
                         </div>
                     </div>
                 </div>
                 <div className="body">
-                    <div className="info">{(!this.state.isStarted) ? "You can select the First Player by Player's name." : ""}</div>
+                    <div className="info">{(!this.state.isStarted) ? "Click on player's name to switch first play." : ""}</div>
                     <div className="board">
                         <div className="board_row">
                             <div className="row"></div>
