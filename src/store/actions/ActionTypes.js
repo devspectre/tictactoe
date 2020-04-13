@@ -1,2 +1,4 @@
+export const SET_PLAYER_ICON = "SET_PLAYER_ICON";
 export const SET_PLAYER_NAME = "SET_PLAYER_NAME";
+export const INIT_CREDIT_LIST = "INIT_CREDIT_LIST";
 export const ADD_CREDIT_NAME = "ADD_CREDIT_NAME";

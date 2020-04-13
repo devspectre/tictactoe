@@ -1,13 +1,23 @@
 .credit-container {
   align-items: center;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+    border-radius: 5px;
+  }
   .title {
     font-size: 27px;
     font-weight: 400;
+    text-align: center;
     color: #ffffff;
   }
   .credit-list {
     position: relative;
-    padding: 20px;
     width: 520px;
     height: 356px;
     box-shadow: 0 3px 21px rgba(1, 1, 1, 0.43);
@@ -15,18 +25,45 @@
     margin: 22px;
     border: 2px solid #474747;
     background-color: #383838;
-    
-    .credit-list-container {
-      display: flex;
-      flex-direction: column;
+    .list-show {
+      position: absolute;
       width: 100%;
       height: 100%;
-      overflow-y: hidden;
-      align-items: center;
-      .credit-item {
-        color: #ffffff;
-        font-size: 21px;
-        font-weight: 400;
+      padding: 20px;
+      .credit-list-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        align-items: center;
+
+        .credit-item {
+          color: #ffffff;
+          font-size: 21px;
+          font-weight: 400;
+        }
+      }
+    }
+    .list-mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to top, #222222ff, #00000000);
+      padding: 20px;
+      .credit-list-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        align-items: center;
+
+        .credit-item {
+          color: transparent;
+          font-size: 21px;
+          font-weight: 400;
+        }
       }
     }
   }
