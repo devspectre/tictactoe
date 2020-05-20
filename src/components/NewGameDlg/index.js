@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 import {
   Button,
   Dialog,
@@ -109,6 +110,10 @@ class NewGameDlg extends React.PureComponent {
     );
   }
 }
+
+NewGameDlg.propTypes = {
+  player_icon: PropTypes.string
+};
 
 const mapStateToProps = (state) => {
   return {
