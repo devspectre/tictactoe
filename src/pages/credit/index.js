@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Button, List } from "@material-ui/core";
+import PropTypes from 'prop-types';
 
 import * as actions from "../../store/actions";
 import "./index.scss";
@@ -99,6 +100,10 @@ class Credit extends React.PureComponent {
     );
   }
 }
+
+Credit.propTypes = {
+  credits: PropTypes.object
+};
 
 const mapStateToProps = (state) => {
   return {

@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 
 import { EndGameDlg } from "../../components";
 import * as actions from "../../store/actions";
@@ -51,6 +52,10 @@ class Board extends React.PureComponent {
     );
   }
 }
+
+Board.propTypes = {
+  squares: PropTypes.array
+};
 
 function SuccessRowSquare(props) {
   const winClass = props.win_cnt === props.value ? "select" : "";
@@ -124,6 +129,10 @@ class SucessBoard extends React.PureComponent {
     );
   }
 }
+
+SucessBoard.propTypes = {
+  cnt: PropTypes.number
+};
 
 class Game extends React.PureComponent {
   constructor(props) {
